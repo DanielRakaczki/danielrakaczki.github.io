@@ -51,7 +51,7 @@ body,
 }
 
 .napok{
-  background: rgba(92, 184, 238, .7);
+  background: rgba(92, 184, 238, .9);
   line-height: 3;
   letter-spacing: .5rem;
   font-weight: 400;
@@ -66,15 +66,25 @@ body,
 } 
 
 @media screen and (max-width: 768px) {
-  .napok {
-    display: none !important;
+  .szamok{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 5rem !important;
   }
 
-  .szamok{
-    display: none !important;
+  .szam{
+    border: none !important;
+  }
+
+  .napok{
+    border-left: none !important;
   }
 
   .container {
     grid-template-columns:repeat(1, 1fr);
+    overflow: scroll;
+    width: calc(100vw - 5rem) !important;
+    margin-left: 5rem;
   }
 }
